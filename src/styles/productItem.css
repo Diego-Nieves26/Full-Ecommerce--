@@ -1,0 +1,157 @@
+.direction {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-gray);
+}
+.ruta {
+  color: var(--quaternary);
+}
+.img-product {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 140px;
+}
+.img-product button {
+  background-color: var(--secondary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: aliceblue;
+}
+.Product-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+.Product-detail > h2 {
+  color: var(--text-gray);
+}
+.Product-detail > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.price p {
+  color: var(--text-gray);
+  font-size: 1.4rem;
+}
+.quantity > div {
+  display: flex;
+  border: 1px solid #515151;
+}
+.quantity > div button {
+  width: 30px;
+  height: 30px;
+  font-size: 1.4rem;
+  color: #515151;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.quantity > div input {
+  height: 30px;
+  width: 60px;
+  border: none;
+  border-left: 1px solid #515151;
+  border-right: 1px solid #515151;
+  color: #515151;
+  font-size: 1, 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Product-detail > button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  background-color: var(--secondary);
+  color: aliceblue;
+  cursor: pointer;
+}
+.Product-detail span {
+  display: block;
+  color: #515151;
+}
+.direction div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--tertiary);
+}
+.Product-info-responsive {
+  display: none;
+  color: var(--quaternary);
+}
+.Product-info p {
+  padding: 20px;
+  color: var(--quaternary);
+}
+.products-suggestions {
+  width: 100%;
+  padding: 0 10px 40px;
+}
+.products-suggestions > div {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, auto);
+  gap: 20px;
+}
+.products-suggestions > h3 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+.img-2{
+  width: 55%;
+  height: auto;
+  object-fit: cover;
+}
+@media (min-width: 1000px) {
+  .direction {
+    padding: 40px;
+  }
+  .parent-container {
+    display: flex;
+    width: 85%;
+    margin: auto;
+  }
+  .img-2 {
+    width: auto;
+    height: 300px;
+  }
+  .Product-info-responsive {
+    display: block;
+  }
+  .Product-info {
+    display: none;
+  }
+  .products-suggestions {
+    width: 80%;
+    margin: 50px auto;
+  }
+  .products-suggestions > div {
+    grid-template-columns: repeat(3, auto);
+  }
+  .Product-detail {
+    gap: 40px;
+  }
+}

@@ -1,0 +1,71 @@
+.purchase {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 30px;
+}
+.purchase > h1 {
+  color: var(--text-gray);
+}
+.purchase-main {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.purchase-main > div {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--quaternary);
+}
+.purchase-header {
+  border-bottom: 1px solid var(--quaternary);
+  padding: 10px;
+}
+.purchase-header h3 {
+  color: var(--tertiary);
+}
+.purchase-main > div ul {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.purchase-main > div ul li {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.purchase-main > div ul li h5 {
+  width: 125px;
+  font-weight: 100;
+  color: var(--text-gray);
+}
+.purchase-main > div ul li div {
+  width: 40px;
+  height: 30px;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--quaternary);
+}
+.purchase-main > div ul li span {
+  color: var(--text-gray);
+  width: 80px;
+  text-align: end;
+}
+@media (min-width: 1000px) {
+  .purchase {
+    width: 65%;
+  }
+  .purchase-main {
+    margin-top: 60px;
+  }
+  .purchase-header {
+    padding: 20px;
+  }
+  .purchase-main > div ul {
+    padding: 30px;
+  }
+}

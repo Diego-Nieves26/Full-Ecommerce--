@@ -1,0 +1,75 @@
+.login {
+  background-color: #fff;
+  width: 90%;
+  margin: 10px auto;
+  padding: 25px;
+}
+.login strong {
+  display: block;
+  width: 230px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.already-registered > p {
+  color: #2fa8f8;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.already-registered > section {
+  background: #d8f5fd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+.already-registered > section b {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.already-registered > section p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login form div {
+  display: flex;
+  flex-direction: column;
+}
+.login form input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  display: block;
+  margin-top: 4px;
+  padding: 6px 8px;
+  width: 100%;
+}
+.login form button {
+  background: var(--primary);
+  color: #fff;
+  margin: 10px 0 25px;
+  padding: 9px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.login span button {
+  border: none;
+  color: #2fa8f8;
+  background: none;
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .login {
+    background-color: #f9f9f9;
+    width: 30%;
+    margin: 50px auto;
+  }
+}

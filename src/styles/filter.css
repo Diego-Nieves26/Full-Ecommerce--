@@ -1,0 +1,122 @@
+.Filter > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-gray);
+}
+.filter-menu {
+  width: 80%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: var(--primary);
+  transition: all 0.7s ease;
+  z-index: 100;
+  padding: 50px 10px;
+}
+.filter-menu > button {
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  color: var(--secondary);
+}
+.filter-menu h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--text-gray);
+}
+.accordion {
+  padding: 10px;
+  width: 100%;
+}
+.accordion .block {
+  margin-bottom: 20px;
+}
+.block > button {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #515151;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border: none;
+  padding: 0 0 5px 0;
+  border-bottom: 3px solid #c7c1c1;
+  background: none;
+}
+.contents {
+  height: 0px;
+  padding: 0px;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.block.active .contents {
+  height: 170px;
+  padding: 10px 20px;
+  overflow: visible;
+}
+.contents > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.contents > form div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.contents > form label {
+  color: var(--tertiary);
+}
+.contents > form div input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--text-gray);
+  display: block;
+  font-size: 1rem;
+  padding: 6px 10px;
+  width: 80%;
+  background-color: transparent;
+  color: #fff;
+}
+.contents > form button {
+  background: var(--quaternary);
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  margin: 25px 0 20px auto;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+.contents ul li {
+  padding: 10px 0;
+  cursor: pointer;
+  color: var(--quaternary);
+}
+.contents ul li:hover{
+  color: #fff;
+}
+@media (min-width: 1000px) {
+  .Filter > button {
+    display: none;
+  }
+  .filter-menu {
+    width: 20%;
+    left: 0;
+    top: 9.6vh;
+    background: transparent;
+  }
+  .filter-menu > button {
+    display: none;
+  }
+}

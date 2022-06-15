@@ -1,0 +1,36 @@
+.container {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container > div {
+  width: 90%;
+  background-color: #eae0e0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.container > div img {
+  border-radius: 50%;
+  display: block;
+  height: 90px;
+  margin: 0 auto 20px;
+  width: 90px;
+}
+.container > div button {
+  background: none;
+  color: var(--secondary);
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+@media (min-width: 1000px) {
+  .container > div {
+    width: 30%;
+  }
+}

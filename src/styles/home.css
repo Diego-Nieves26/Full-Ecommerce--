@@ -1,0 +1,25 @@
+.Home {
+  padding: 50px 20px 13px;
+}
+.search-and-filter {
+  margin: 0 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+.main li {
+  padding: 20px 10px;
+}
+@media (min-width: 1000px) {
+  .Home {
+    padding: 50px 5% 50px 25%;
+  }
+  .main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+  }
+}
