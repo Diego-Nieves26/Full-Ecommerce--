@@ -24,8 +24,8 @@ Tambien una barra de navegacion que se muestra en toda la app, que sirve para di
 - En la ruta“/products/:id” se listan los productos de la misma categoría del producto mostrado.
 - Carrito con un botón para comprar los productos agregados y a la vez mostrarlos.
 - Los productos en el carrito cuentan con un boton para ser retirados de dicho campo.
-- Agregar una ruta pública “/signup” donde el usuario pueda crear una cuenta
-- Agregar una ruta privada “/user” donde el usuario pueda ver sus datos.
+- La ruta pública “/signup” sirve para que el usuario pueda registrarse o iniciar secion.
+- La ruta protegida “/user” muestra al usuario sus datos.
 
 ## Autor
 ** Diego Nieves **
