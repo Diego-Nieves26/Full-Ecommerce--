@@ -1,10 +1,10 @@
 ## Decripcion
 
-Hice un ecommerce donde el usuario pueda loguearse, ver y filtrar productos, añadirlos al carrito y comprarlos. Utilizando una [API(https://documenter.getpostman.com/view/5028918/UVypxw3W#8d80d26a-7c0a-4283-a272-253ae4144624) proporcionada por Academlo para poder hacer las funcionalidades. 
+Hice un ecommerce donde el usuario pueda loguearse, ver y filtrar productos, añadirlos al carrito y comprarlos. Utilizando una [API](https://documenter.getpostman.com/view/5028918/UVypxw3W#8d80d26a-7c0a-4283-a272-253ae4144624) proporcionada por Academlo para poder hacer las funcionalidades. 
 
-La ruta raíz “/”, se encarga de listar todos los productos. Cada producto será un link que llevará a la ruta “/product/:id”, cuyo id dependerá del producto seleccionado, esto para mostrar mas datos del producto. A la vez esta ruta contiene 3 tipos de filtro, por categoria con una etiqueta select, por nombre con un simple imput y filtrado por precio con un pequeño formulario.
+La ruta raíz “/”, se encarga de listar todos los productos. Cada producto es un link que llevará a la ruta “/product/:id”, cuyo id dependerá del producto seleccionado, esto para mostrar mas datos del producto. A la vez esta ruta contiene 3 tipos de filtro, por categoria con una etiqueta select, por nombre con un simple imput y filtrado por precio con un pequeño formulario.
 
-La ruta “/shop/:id” mostrará toda la información del producto: nombre, imágenes, descripción y precio. A la vez tiene un contador para que el usuario seleccione cuántos productos desea comprar. Tiene un botón para agregar el producto al carrito, y un listado de productos con la misma categoría del producto seleccionado.
+La ruta “/product/:id” mostrará toda la información del producto: nombre, imágenes, descripción y precio. A la vez tiene un contador para que el usuario seleccione cuántos productos desea comprar. Tiene un botón para agregar el producto al carrito, y un listado de productos con la misma categoría del producto seleccionado.
 
 La ruta “/purchases” es una ruta protegida. Aquí el usuario podrá ver los productos que ha comprado.
 
