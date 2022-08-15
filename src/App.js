@@ -1,16 +1,17 @@
-import "./App.css";
 import { Nav, LoadingScreen, ProtectedRoutes, Modal } from "./components";
 import { Home, Login, ProductItem, User, Purchases } from "./pages";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "./App.css";
 
 function App() {
   const isLoading = useSelector((state) => state.loading);
   const showModal = useSelector((state) => state.modal);
   window.scroll({
     top: 1,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
+
   return (
     <HashRouter>
       {isLoading && <LoadingScreen />}
@@ -25,16 +26,16 @@ function App() {
           <Route path="/purchases" element={<Purchases />} />
         </Route>
       </Routes>
-      <footer>
-        <h2>@ Academlo 2022</h2>
-        <div>
-          <a href="/">
+      <footer className="footer">
+        <h2 className="footer__h2">@ Academlo 2022</h2>
+        <div className="footerContainer">
+          <a className="footerContainer__a" href="/">
             <i className="bx bxl-instagram"></i>
           </a>
-          <a href="/">
+          <a className="footerContainer__a" href="/">
             <i className="bx bxl-linkedin"></i>
           </a>
-          <a href="/">
+          <a className="footerContainer__a" href="/">
             <i className="bx bxl-twitter"></i>
           </a>
         </div>

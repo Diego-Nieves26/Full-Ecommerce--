@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 import { setIsLoading } from "./loading.slice";
+import axios from "axios";
 
 export const productsSlice = createSlice({
   name: "products",
@@ -41,15 +41,16 @@ export const productPerCategory = (categoryId) => (dispatch) => {
 };
 
 export const productsPerPrice = (from, to) => (dispatch) => {
-    dispatch(setIsLoading(true));
-    return axios.get('https://ecommerce-api-react.herokuapp.com/api/v1/products')
-        .then((res) => {
-          const filter = res.data.data.products.filter(
-            product => product.price >= from && product.price <= to
-          )
-          dispatch(setProducts(filter))
-        })
-        .finally(() => dispatch(setIsLoading(false)));
-}
+  dispatch(setIsLoading(true));
+  return axios
+    .get("https://ecommerce-api-react.herokuapp.com/api/v1/products")
+    .then((res) => {
+      const filter = res.data.data.products.filter(
+        (product) => product.price >= from && product.price <= to
+      );
+      dispatch(setProducts(filter));
+    })
+    .finally(() => dispatch(setIsLoading(false)));
+};
 
 export default productsSlice.reducer;

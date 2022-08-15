@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 import { setIsLoading } from "./loading.slice";
 import getConfig from "../../utils/getConfig";
+import axios from "axios";
 
 export const purchaseSlice = createSlice({
   name: "purchase",

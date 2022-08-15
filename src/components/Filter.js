@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { productPerCategory, productsPerPrice } from "../store/slices/products.slice";
+import {
+  productPerCategory,
+  productsPerPrice,
+} from "../store/slices/products.slice";
 import "../styles/filter.css";
 
 const Filter = () => {
@@ -13,7 +16,7 @@ const Filter = () => {
   const dispatch = useDispatch();
   const filterPrice = (e) => {
     e.preventDefault();
-    dispatch(productsPerPrice(Number(from), Number(to)))
+    dispatch(productsPerPrice(Number(from), Number(to)));
   };
   return (
     <div className="Filter">
@@ -22,7 +25,7 @@ const Filter = () => {
       </button>
       <div
         className="filter-menu"
-        style={{ right: openFilter ? "0" : "-300px" }}
+        style={{ right: openFilter ? "0" : "-100%" }}
       >
         <button onClick={() => setOpenFilter(false)}>
           <i className="bx bx-x"></i>

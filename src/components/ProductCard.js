@@ -1,13 +1,14 @@
-import React from "react";
 import { addProduct } from "../store/slices/cart.slice";
 import { setModal } from "../store/slices/modal.slice";
 import { useDispatch } from "react-redux/es/exports";
 import { useNavigate } from "react-router-dom";
 import "../styles/productCard.css";
+import React from "react";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const addCart = () => {
     const productDates = {
       id: product.id,
@@ -16,15 +17,25 @@ const ProductCard = ({ product }) => {
     dispatch(addProduct(productDates));
     dispatch(setModal("Added product."));
   };
+
   const changeBtnCart = () => {
-    addCart()
-  }
+    addCart();
+  };
+
   return (
     <li onClick={() => navigate(`/product/${product.id}`)}>
       <div className="card">
         <div className="card-img">
-          <img className="img img-card-animate" src={product.productImgs[0]} alt="" />
-          <img className="img img-card-animate-2" src={product.productImgs[1]} alt="" />
+          <img
+            className="img img-card-animate"
+            src={product.productImgs[0]}
+            alt=""
+          />
+          <img
+            className="img img-card-animate-2"
+            src={product.productImgs[1]}
+            alt=""
+          />
         </div>
         <div className="card-info">
           <h3>{product.title}</h3>

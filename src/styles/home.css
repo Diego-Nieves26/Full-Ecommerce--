@@ -1,6 +1,12 @@
 .Home {
   padding: 50px 20px 13px;
 }
+
+.main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
 .search-and-filter {
   margin: 0 10px 30px;
   display: flex;
@@ -11,6 +17,13 @@
 }
 .main li {
   padding: 20px 10px;
+  margin: auto;
+}
+
+@media (min-width: 690px) {
+  .main {
+    grid-template-columns: repeat(2, auto);
+  }
 }
 @media (min-width: 1000px) {
   .Home {
