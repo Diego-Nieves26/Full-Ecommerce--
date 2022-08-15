@@ -1,15 +1,17 @@
-import React from "react";
-import "../styles/search.css";
-import { useForm } from "react-hook-form";
 import { searchProduct } from "../store/slices/products.slice";
+import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
+import "../styles/search.css";
+import React from "react";
 
 const Search = () => {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
+
   const submitQuery = (data) => {
     dispatch(searchProduct(data.query));
   };
+
   return (
     <form className="Search" onSubmit={handleSubmit(submitQuery)}>
       <input

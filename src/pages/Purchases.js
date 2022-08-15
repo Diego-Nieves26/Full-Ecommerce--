@@ -1,17 +1,19 @@
-import React, { useEffect } from "react";
+import { getPurchases } from "../store/slices/purchases.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { getPurchases } from "../store/slices/purchases.slice";
+import React, { useEffect } from "react";
 import "../styles/purchase.css";
 
 const Purchases = () => {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  const purchasesData = useSelector((state) => state.purchases);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const purchasesData = useSelector((state) => state.purchases);
-  const options = { year: "numeric", month: "long", day: "numeric" };
+
   useEffect(() => {
     dispatch(getPurchases());
   }, [dispatch]);
+
   return (
     <div className="purchase">
       <div className="direction">

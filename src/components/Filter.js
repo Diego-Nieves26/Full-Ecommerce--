@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
 import {
   productPerCategory,
   productsPerPrice,
@@ -7,17 +7,19 @@ import {
 import "../styles/filter.css";
 
 const Filter = () => {
-  const [openFilter, setOpenFilter] = useState(false);
+  const categories = useSelector((state) => state.categories);
   const [showCategory, setShowCategory] = useState(false);
+  const [openFilter, setOpenFilter] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
   const [from, setFrom] = useState(0);
   const [to, setTo] = useState(0);
-  const categories = useSelector((state) => state.categories);
   const dispatch = useDispatch();
+
   const filterPrice = (e) => {
     e.preventDefault();
     dispatch(productsPerPrice(Number(from), Number(to)));
   };
+
   return (
     <div className="Filter">
       <button onClick={() => setOpenFilter(true)}>

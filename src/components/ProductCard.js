@@ -10,12 +10,18 @@ const ProductCard = ({ product }) => {
   const navigate = useNavigate();
 
   const addCart = () => {
-    const productDates = {
-      id: product.id,
-      quantity: 1,
-    };
-    dispatch(addProduct(productDates));
-    dispatch(setModal("Added product."));
+    const token = localStorage.getItem("token");
+    if (token) {
+      const productDates = {
+        id: product.id,
+        quantity: 1,
+      };
+      dispatch(addProduct(productDates));
+      dispatch(setModal("Added product."));
+    } else {
+      navigate("/login");
+      dispatch(setModal("Please login."));
+    }
   };
 
   const changeBtnCart = () => {

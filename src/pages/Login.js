@@ -1,17 +1,18 @@
-import axios from "axios";
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux/es/exports";
-import { setModal } from "../store/slices/modal.slice";
-import "../styles/login.css";
 import { setIsLoading } from "../store/slices/loading.slice";
+import { setModal } from "../store/slices/modal.slice";
+import { useDispatch } from "react-redux/es/exports";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import "../styles/login.css";
+import axios from "axios";
 
 const Login = () => {
   const [registeredUser, setRegisteredUser] = useState(true);
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const submitLogin = (data) => {
     dispatch(setIsLoading(true));
     axios
@@ -31,6 +32,7 @@ const Login = () => {
       .catch((error) => dispatch(setModal(error.response.data.message)))
       .finally(() => dispatch(setIsLoading(false)));
   };
+
   const submitNewLogin = (data) => {
     dispatch(setIsLoading(true));
     data.role = "normal";
@@ -43,6 +45,7 @@ const Login = () => {
       .catch((error) => dispatch(setModal(error.response.data.message)))
       .finally(() => dispatch(setIsLoading(false)));
   };
+
   const btnChange = () => {
     setRegisteredUser(true);
     reset({});

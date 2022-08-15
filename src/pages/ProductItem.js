@@ -1,20 +1,23 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
-import { ProductCard } from "../components";
-import { setIsLoading } from "../store/slices/loading.slice";
 import { productPerCategory } from "../store/slices/products.slice";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { setIsLoading } from "../store/slices/loading.slice";
 import { addProduct } from "../store/slices/cart.slice";
+import { useDispatch, useSelector } from "react-redux";
 import { setModal } from "../store/slices/modal.slice";
+import React, { useEffect, useState } from "react";
+import { ProductCard } from "../components";
 import "../styles/productItem.css";
+import axios from "axios";
 
 const ProductItem = () => {
-  const [data, setData] = useState({});
-  const [quantity, setQuantity] = useState(1);
   const sameProducts = useSelector((state) => state.products);
-  const { id } = useParams();
+  const [quantity, setQuantity] = useState(1);
+  const [indexImg, setIndexImg] = useState(0);
+  const [data, setData] = useState({});
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { id } = useParams();
+
   useEffect(() => {
     dispatch(setIsLoading(true));
     axios
@@ -28,19 +31,24 @@ const ProductItem = () => {
       })
       .finally(() => dispatch(setIsLoading(false)));
   }, [id, dispatch]);
+
   const addToCart = () => {
-    const product = {
-      id: id,
-      quantity: quantity,
-    };
-    dispatch(addProduct(product));
-    dispatch(setModal("Added product."));
+    const token = localStorage.getItem("token");
+    if (token) {
+      const product = {
+        id: id,
+        quantity: quantity,
+      };
+      dispatch(addProduct(product));
+      dispatch(setModal("Added product."));
+    } else {
+      navigate("/login");
+    }
   };
+
   const lowerQuantity = () => {
     if (quantity > 1) setQuantity(quantity - 1);
   };
-
-  const [indexImg, setIndexImg] = useState(0);
 
   const prev = () => {
     if (indexImg === 0) {
@@ -49,6 +57,7 @@ const ProductItem = () => {
       setIndexImg(indexImg - 1);
     }
   };
+
   const next = () => {
     if (indexImg === 2) {
       setIndexImg(0);
@@ -56,6 +65,7 @@ const ProductItem = () => {
       setIndexImg(indexImg + 1);
     }
   };
+
   return (
     <div>
       <div className="direction">
