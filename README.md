@@ -1,71 +1,39 @@
-# Getting Started with Create React App
+## Decripcion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hice un ecommerce donde el usuario pueda loguearse, ver y filtrar productos, añadirlos al carrito y comprarlos. Utilizando una [API](https://documenter.getpostman.com/view/5028918/UVypxw3W#8d80d26a-7c0a-4283-a272-253ae4144624) proporcionada por Academlo para poder hacer las funcionalidades. 
 
-## Available Scripts
+La ruta raíz “/”, se encarga de listar todos los productos. Cada producto es un link que llevará a la ruta “/product/:id”, cuyo id dependerá del producto seleccionado, esto para mostrar mas datos del producto. A la vez esta ruta contiene 3 tipos de filtro, por categoria con una etiqueta select, por nombre con un simple imput y filtrado por precio con un pequeño formulario.
 
-In the project directory, you can run:
+La ruta “/product/:id” mostrará toda la información del producto: nombre, imágenes, descripción y precio. A la vez tiene un contador para que el usuario seleccione cuántos productos desea comprar. Tiene un botón para agregar el producto al carrito, y un listado de productos con la misma categoría del producto seleccionado.
 
-### `npm start`
+La ruta “/purchases” es una ruta protegida. Aquí el usuario podrá ver los productos que ha comprado.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+La ruta pública “/login”, donde el usuario pueda loguearse y registrarse en la aplicación.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Tambien una barra de navegacion que se muestra en toda la app, que sirve para direccionar a las diferentes rutas.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Funciones y datos del proyecto
 
-### `npm run build`
+- Las rutas (“/” - “/products/:id” - “/login”) son libres y la ruta (“/purchases”) es protegida.
+- Practique con redux thunk.
+- En la ruta “/” los productos son Links que lleven a la ruta /products/:id.
+- En la ruta “/” Los productos se pueden filtrar por nombre, categoría y precio.
+- En la ruta “/products/:id” hay un contador para que el usuario pueda elegir la cantidad del producto que quiera agregar al carrito.
+- En la ruta “/products/:id” hay un botón para agregar el producto al carrito.
+- En la ruta“/products/:id” se listan los productos de la misma categoría del producto mostrado.
+- Carrito con un botón para comprar los productos agregados y a la vez mostrarlos.
+- Los productos en el carrito cuentan con un boton para ser retirados de dicho campo.
+- La ruta pública “/signup” sirve para que el usuario pueda registrarse o iniciar secion.
+- La ruta protegida “/user” muestra al usuario sus datos.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Autor
+** Diego Nieves **
+* [LinkedIn](https://www.linkedin.com/in/diego-nieves-04b409242/)
+* [Portafolio web](https://nvs-dlc.netlify.app)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Abrir App
+- [Ecommerce App](https://joyful-melomakarona-6f3db3.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# React-Ecommerce
+## Contratación
+Si quieres contratarme puedes escribirme a nieves.diego0426@gmail.com 👍.
