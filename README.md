@@ -27,6 +27,16 @@ Tambien una barra de navegacion que se muestra en toda la app, que sirve para di
 - La ruta pública “/signup” sirve para que el usuario pueda registrarse o iniciar secion.
 - La ruta protegida “/user” muestra al usuario sus datos.
 
+## Utilice
+
+- React
+- Axios
+- Css
+- Framer-Motion
+- Redux-Toolkit
+- React-Router-Dom
+- React-Hook-Form
+
 ## Autor
 ** Diego Nieves **
 * [LinkedIn](https://www.linkedin.com/in/diego-nieves-04b409242/)
