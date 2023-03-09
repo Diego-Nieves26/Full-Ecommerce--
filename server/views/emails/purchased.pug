@@ -1,0 +1,12 @@
+extends base
+
+block emailContent
+  p Gracias por tu compra #{name},
+    p  Detalle de la compra    
+    p Producto --- Precio U. --- Cantidad
+    each item in dataPurchased.productData
+      li #{item.name} ----- #{item.priceUnt}$ ----- #{item.quantity}
+    hr
+    p Total - #{dataPurchased.totalPrice}$
+    p De - Academlo Store
+    p GRACIAS
